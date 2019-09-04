@@ -10,13 +10,16 @@ class RapperElementWidget extends StatelessWidget {
   RapperElementWidget(this.name, this.details, this.imageUrl);
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
+    return Card(
+        elevation: 6.0,
+        child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
         RapperElementHeaderWidget(name, imageUrl),
         Divider(),
         RapperDetailsWidget(details)
       ],
+    )
     );
   }
 }
